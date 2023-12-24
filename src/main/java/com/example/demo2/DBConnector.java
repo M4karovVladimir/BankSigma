@@ -38,7 +38,7 @@ public class DBConnector {
     public static CurrentUser RegisterUser(String login, String password, String name) {
         try {
             Connection connection2 = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/ZaimBank", "postgres", "admin");
+                    "jdbc:postgresql://localhost:5432/BankSigma", "postgres", "admin");
             String request = "INSERT INTO Users VALUES(DEFAULT,\'" + name + "\'," + "\'" + login + "\'," + "\'" + password + "\'" + ");" ;
             Statement statement = connection2.createStatement();
             ResultSet s = statement.executeQuery(request);
