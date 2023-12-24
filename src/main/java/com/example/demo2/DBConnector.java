@@ -13,7 +13,7 @@ public class DBConnector {
         boolean isFind = true;
         try {
             Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/ZaimBank", "postgres", "admin");
+                    "jdbc:postgresql://localhost:5432/BankSigma", "postgres", "admin");
             String request = "SELECT * FROM public.Users where login=\'"+login+"\'"+ " and password = \'"+password+"\'";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(request);
